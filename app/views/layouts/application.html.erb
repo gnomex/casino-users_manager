@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hey!!!</title>
+  <meta name="author" content="Kenner Kliemann">
+
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+  <section class="container">
+    <section class="row">
+      <%= render "shared/flash_messages" %>
+
+      <%= yield %>
+
+    </section>
+  </section>
+
+  <!-- Javascripts -->
+  <%= javascript_include_tag "application" %>
+  </body>
+</html>
