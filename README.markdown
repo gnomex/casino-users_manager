@@ -1,6 +1,8 @@
 # CASino Users Controller
     This application provides a simple way to CRUD users for [CASino](http://casino.rbcas.com/)
 
+The CASinoAPP is only for Authentication. At the first time, we need to configure some backend to create and manage users, for tests or a new users database.... and this code is for manage their users.
+
 ## Go!
 
 1. Clone the source
@@ -9,7 +11,7 @@
 4. configure the database (`config/database.yml`)
 5. run de blundler (`bundle install`)
 6. run de bower (`bower install`)
-7.. to run the app (`rails s`)
+7. to run the app (`rails s`)
 8. Then open [http://localhost:3000/](http://localhost:3000/)
 
 ## Contributing
