@@ -1,0 +1,31 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", :record => @user %>
+
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= error_for @user, :username %>
+  </p>
+
+  <p>
+    <%= f.label :fullname %>
+    <%= f.text_field :fullname %>
+    <%= error_for @user, :fullname %>
+  </p>
+
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= error_for @user, :email %>
+  </p>
+
+  <p>
+    <%= f.label :encrypted_password %>
+    <%= f.password_field :encrypted_password %>
+    <%= error_for @user, :encrypted_password %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

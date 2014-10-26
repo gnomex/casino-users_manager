@@ -19,7 +19,7 @@ module CASInoUsersManager
     config.i18n.enforce_available_locales = false
     config.encoding = "utf-8"
 
-    config.active_record.whitelist_attributes = true
+    # config.active_record.whitelist_attributes = true
     config.action_controller.action_on_unpermitted_parameters = :raise
 
     # To re-enable this authenticity token for remote forms

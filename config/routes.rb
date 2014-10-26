@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :marmots
+  resources :users
 
-  root to: "marmots#index"
+  root to: "users#index"
 end

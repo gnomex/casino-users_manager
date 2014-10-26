@@ -5,16 +5,31 @@ pt-BR:
 
     users:
       create:
-        notice: "Seu cadastro foi realizado com sucesso!"
+        notice: "O usuário foi cadastrado com sucesso!"
+      destroy:
+        notice: "O usuário foi removido com sucesso"
+
+      form:
+        title: "Usuários"
+        id: "#"
+        username: "Usuário"
+        fullname: "Nome Completo"
+        email: "Email"
+        created: "Criado em"
 
     sessions:
       create:
         notice: "Que bom que você voltou!"
         alert: "E-mail/senha inválidos."
+        error: "O usuário não pode ser criado"
 
     questions:
       create:
         notice: "Sua pergunta foi adiciona com sucesso!"
+
+      destroy:
+        notice: "O usuário foi removido com sucesso"
+        error: "Algum problema aconteceu e o usuário não foi removido"
 
     replies:
       create:

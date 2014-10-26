@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.3'
 
-gem 'rails', '~> 4.1.4'
-gem "protected_attributes", "~> 1.0.5"
+gem 'rails', '~> 4.1.6'
+# gem "protected_attributes", "~> 1.0.5"
 gem 'pg'
 
 gem 'unicorn', '~> 4.8.2'
 # gem 'unicorn-worker-killer'
 gem 'mina', '~> 0.3.0'
 
-gem 'newrelic_rpm', '~> 3.9.5.251'
+# gem 'newrelic_rpm', '~> 3.9.5.251'
+
+gem 'bcrypt', '~> 3.1.9'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
