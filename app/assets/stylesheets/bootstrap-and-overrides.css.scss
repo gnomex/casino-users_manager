@@ -1,0 +1,76 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 90px;
+}
+
+.logo {
+  color: #F76A0C;
+}
+.site-header {
+  background-color: #A0C5CB;
+  overflow: hidden;
+  width: 100%;
+  opacity:0.9;
+  position: fixed;
+  top: 0px;
+
+  a {
+    color: #FFF;
+  }
+
+  h1 {
+    float: left;
+    color: #1D537E;
+    text-shadow: 2px 2px 2px #ffffff;
+  }
+
+  .info {
+  margin-right: 10px;
+  text-align: right;
+  float: right;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+}
+
+/*Locale flags*/
+.profile {
+  float: right;
+  padding-top: 5px;
+  height: 50px;
+  position: relative;
+  .flags {
+    float: right;
+    margin-right: 5px;
+    li {
+      list-style: none;
+      a {
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+        &.br {
+          background: transparent image-url("br-flag.png") no-repeat center top;
+        }
+        &.en {
+          background: transparent image-url("en-flag.png") no-repeat center top;
+        }
+        &.es {
+          background: transparent image-url("es-flag.png") no-repeat center top;
+        }
+      }
+    }
+  }
+}
+
+.bs-callout {
+padding: 20px;
+margin: 20px 0;
+border: 1px solid #eee;
+border-left-width: 5px;
+border-radius: 3px;
+}
+
+.bs-callout-info {
+border-left-color: #5bc0de;
+}

@@ -16,6 +16,11 @@ pt-BR:
         fullname: "Nome Completo"
         email: "Email"
         created: "Criado em"
+        action: "Ação"
+        new: "Novo usuário"
+        submit: "Gravar!"
+        delete: "Excluir"
+        confirm: "Você tem certeza?"
 
     sessions:
       create:

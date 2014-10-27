@@ -1,13 +1,18 @@
-<h1><% t("flash.users.form.title") %></h1>
+<h1><%= t("flash.users.form.title") %></h1>
+
+<section class="bs-callout bs-callout-info">
+  <%= link_to t("flash.users.form.new"), new_user_path, class: "btn btn-info" %>
+</section>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th><% t("flash.users.form.id") %></th>
-      <th><% t("flash.users.form.username") %></th>
-      <th><% t("flash.users.form.fullname") %></th>
-      <th><% t("flash.users.form.email") %></th>
-      <th><% t("flash.users.form.created") %></th>
+      <th><%= t("flash.users.form.id") %></th>
+      <th><%= t("flash.users.form.username") %></th>
+      <th><%= t("flash.users.form.fullname") %></th>
+      <th><%= t("flash.users.form.email") %></th>
+      <th><%= t("flash.users.form.created") %></th>
+      <th><%= t("flash.users.form.action") %></th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +23,7 @@
         <td><%= user.fullname %></td>
         <td><%= user.email %></td>
         <td><%= user.created_at %></td>
-        <td><%= link_to "Edit", edit_user_path(user) %> | <%= link_to "Delete", user_path(user), method: :delete, confirm: "Are you sure?" %></td>
+        <td><%= link_to t("flash.users.form.delete"), user_path(user), method: :delete, confirm: t("flash.users.form.confirm"), class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

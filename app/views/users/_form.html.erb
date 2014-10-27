@@ -1,31 +1,32 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, class: "form-inline" do |f| %>
   <%= render "shared/error_messages", :record => @user %>
 
-  <p>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+  <section class="form-group">
+    <%= f.label :username, class: 'form-label' %>
+    <%= f.text_field :username, class: 'form-control' %>
     <%= error_for @user, :username %>
-  </p>
+  </section>
 
-  <p>
-    <%= f.label :fullname %>
-    <%= f.text_field :fullname %>
+  <section class="form-group">
+    <%= f.label :fullname, class: 'form-label' %>
+    <%= f.text_field :fullname, class: 'form-control' %>
     <%= error_for @user, :fullname %>
-  </p>
+  </section>
 
-  <p>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+  <section class="form-group">
+    <%= f.label :email, class: 'form-label' %>
+    <%= f.email_field :email, class: 'form-control' %>
     <%= error_for @user, :email %>
-  </p>
+  </section>
 
-  <p>
-    <%= f.label :encrypted_password %>
-    <%= f.password_field :encrypted_password %>
+  <section class="form-group">
+    <%= f.label :encrypted_password, class: 'form-label' %>
+    <%= f.password_field :encrypted_password, class: "form-control" %>
     <%= error_for @user, :encrypted_password %>
-  </p>
+  </section>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-actions">
+    <%= f.submit t("flash.users.form.submit"), class: 'btn btn-success' %>
+    <%= link_to "Cancelar", users_path, class: 'btn' %>
+  </div>
 <% end %>
