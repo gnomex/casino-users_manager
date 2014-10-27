@@ -1,0 +1,30 @@
+en:
+  flash:
+    auth:
+      alert: "You must be need stay logged in to"
+
+    users:
+      create:
+        notice: "The user has been created!"
+        error: "Hey! Something wrong happens"
+      destroy:
+        notice: "The user has been removed"
+
+      form:
+        title: "Users"
+        id: "#"
+        username: "User"
+        fullname: "Full Name"
+        email: "Email"
+        created: "Cirated at"
+        action: "Action"
+        new: "New User"
+        submit: "Save!"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+    sessions:
+      create:
+        notice: "Its good to se you again!"
+        alert: "E-mail/password invalid."
+        error: "The user cannot be created"

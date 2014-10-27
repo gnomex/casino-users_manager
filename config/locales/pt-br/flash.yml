@@ -6,6 +6,7 @@ pt-BR:
     users:
       create:
         notice: "O usuário foi cadastrado com sucesso!"
+        error: "Opa! Algo deu errado, verifique os campos abaixo."
       destroy:
         notice: "O usuário foi removido com sucesso"
 
@@ -15,6 +16,7 @@ pt-BR:
         username: "Usuário"
         fullname: "Nome Completo"
         email: "Email"
+        password: "Senha"
         created: "Criado em"
         action: "Ação"
         new: "Novo usuário"

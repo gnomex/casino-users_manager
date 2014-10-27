@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   respond_to :html, :json
 
-  before_action :locale
+  before_filter :locale
 
   def locale
     if I18n.available_locales.include?(params[:l])

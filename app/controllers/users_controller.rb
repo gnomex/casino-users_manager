@@ -12,10 +12,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:notice] = t("flash.users.create.notice")
-      redirect_to root_path
+      redirect_to root_path, notice: t("flash.users.create.notice")
     else
-      flash[:notice] = t("flash.users.create.error")
+      flash[:alert] = t("flash.users.create.error")
       render :new
     end
   end
@@ -23,11 +22,9 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     if @user.destroy
-      flash[:notice] = t("flash.users.destroy.notice")
-      redirect_to root_path
+      redirect_to root_path, notice: t("flash.users.destroy.notice")
     else
-      flash[:notice] = t("flash.users.destroy.error")
-      render :show
+      redirect_to root_path, alert: t("flash.users.destroy.error")
     end
   end
 
