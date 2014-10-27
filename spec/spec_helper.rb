@@ -11,10 +11,11 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
 
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
-  config.order = 'random'
+  config.include FactoryGirl::Syntax::Methods
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
+
+  config.order = 'random'
+  config.color_enabled = true
 end
