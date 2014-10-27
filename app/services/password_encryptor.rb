@@ -27,6 +27,10 @@ class PasswordEncryptor
     encryptor.create(password)
   end
 
+  def self.verify(hash)
+    encryptor.new(hash)
+  end
+
   # Return the encryptor adapter. Must always respond to
   # the +hexdigest+ method.
   #
