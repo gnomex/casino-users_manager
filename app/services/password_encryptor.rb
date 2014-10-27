@@ -1,6 +1,7 @@
 require 'bcrypt'
 
 class PasswordEncryptor
+  include BCrypt
   # Return the password hash and salt that must be stored on
   # user's record.
   #
@@ -11,7 +12,7 @@ class PasswordEncryptor
     salt = encryptor.create(Time.now)
     hash = hasher(password, salt)
 
-    {:salt => salt, :hash => hash}
+    {salt: salt, hash: hash.to_s}
   end
 
   # Password must the plain text version.
@@ -21,8 +22,9 @@ class PasswordEncryptor
   #   #=>
   #
   def self.hasher(password, salt)
-    # encryptor.hexdigest("--#{salt}--#{password}--")
-    encryptor.create("#{salt}-#{password}")
+    # encryptor.hexdigest("--#{salt}--#{password}--") # For SHA1
+    # encryptor.create("#{salt}-#{password}") # Casino-active_record not support it yet
+    encryptor.create(password)
   end
 
   # Return the encryptor adapter. Must always respond to

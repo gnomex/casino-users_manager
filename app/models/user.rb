@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
   end
 
   private
-    def assing_password
-    encryption = PasswordEncryptor.encrypt(@encrypted_password)
+  def assing_password
+    encryption = PasswordEncryptor.encrypt(encrypted_password.to_s)
 
     self.encrypted_password = encryption[:hash]
   end
