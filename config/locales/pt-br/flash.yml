@@ -23,6 +23,7 @@ pt-BR:
         submit: "Gravar!"
         delete: "Excluir"
         confirm: "Você tem certeza?"
+        erros_mesages: "Erros"
 
     sessions:
       create:

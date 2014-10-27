@@ -26,7 +26,7 @@ module CASInoUsersManager
     # config.action_view.embed_authenticity_token_in_remote_forms = true
 
     # Disable the asset pipeline.
-    config.assets.enabled = false
+    config.assets.enabled = true
     # config.assets.css_compressor = :yui
     config.assets.css_compressor = :sass
     config.assets.js_compressor = :uglify
