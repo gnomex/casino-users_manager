@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  # controller :application do
-  #   get "/locale" => "application#locale"
-  # end
-
-  scope "(:locale)", :locale => /en|pt-BR/ do
-    root to: "users#index"
-
-    resources :users, only: [:index, :new, :create, :destroy]
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/  do
+    resources :users
   end
+
+  root to: "users#index"
 end

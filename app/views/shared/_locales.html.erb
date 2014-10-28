@@ -1,7 +1,7 @@
 <section class="profile">
   <ul class="flags">
-    <li><%= link_to "", locale: "pt-BR", class: "flag br", id: "pt-BR" %></li>
-    <li><%= link_to "", locale: "en", class: "flag en", id: "en" %></li>
-    <li><%= link_to "", locale: "es", class: "flag es", id: "es" %></li>
+    <li><%= link_to_unless_current "",root_path( { locale: "pt-BR" } ), class: "flag br", id: "pt-BR" %></li>
+    <li><%= link_to_unless_current "",root_path( { locale: "en" } ), class: "flag en", id: "en" %></li>
+    <li><%= link_to_unless_current "",root_path( { locale: "es" } ), class: "flag es", id: "es" %></li>
   </ul>
 </section>

@@ -16,7 +16,6 @@ module CASInoUsersManager
     config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml").to_s]
     config.autoload_paths += %W(#{config.root}/lib/validators/)
     config.i18n.default_locale = :"pt-BR"
-    config.i18n.enforce_available_locales = false
     config.encoding = "utf-8"
 
     # config.active_record.whitelist_attributes = true

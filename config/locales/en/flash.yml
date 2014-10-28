@@ -7,6 +7,7 @@ en:
       create:
         notice: "The user has been created!"
         error: "Hey! Something wrong happens"
+
       destroy:
         notice: "The user has been removed"
 
@@ -16,6 +17,7 @@ en:
         username: "User"
         fullname: "Full Name"
         email: "Email"
+        password: "Password"
         created: "Cirated at"
         action: "Action"
         new: "New User"
