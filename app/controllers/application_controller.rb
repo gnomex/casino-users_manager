@@ -1,10 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # before_filter :set_locale_by_subdomain
   before_filter :set_locale
 
-  respond_to :html, :json
+  respond_to :html, :json, :xml
 
   def default_url_options( options = {} )
     { locale: I18n.locale }
@@ -12,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   private
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.locale = params[:locale] || set_locale_by_subdomain
   end
 
   def set_locale_by_scope
