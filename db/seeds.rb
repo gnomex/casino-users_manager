@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+users = User.create([
+  {
+    username: 'gnomex',
+    encrypted_password: PasswordEncryptor.encrypt('gnomos')[:hash],
+    email: 'gnomex@gnom.os', role: 'admin'
+  },
+  {
+    username: 'john',
+    encrypted_password: PasswordEncryptor.encrypt('john')[:hash],
+    email: 'john@gnom.os'
+  },
+  {
+    username: 'doe',
+    encrypted_password: PasswordEncryptor.encrypt('doe')[:hash],
+    email: 'doe@gnom.os'
+  }
+])
