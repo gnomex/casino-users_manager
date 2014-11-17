@@ -12,6 +12,7 @@
       <th><%= t("flash.users.form.fullname") %></th>
       <th><%= t("flash.users.form.email") %></th>
       <th><%= t("flash.users.form.created") %></th>
+      <th><%= t("flash.users.form.admin") %></th>
       <th><%= t("flash.users.form.action") %></th>
     </tr>
   </thead>
@@ -23,7 +24,12 @@
         <td><%= user.fullname %></td>
         <td><%= user.email %></td>
         <td><%= user.created_at %></td>
-        <td><%= link_to t("flash.users.form.delete"), user_path(user), method: :delete, confirm: "#{t("flash.users.form.confirm")}", class: "btn btn-danger" %></td>
+        <td><%= user.admin? %></td>
+        <td>
+          <button class="btn btn-primary admin" id="user-<%= user.id %>">
+            <%= t("flash.users.form.make_admin") %> <span class="badge"><i class="glyphicon glyphicon-plus"></i></span>
+          </button>
+          <%= link_to t("flash.users.form.delete"), user_path(user), method: :delete, confirm: "#{t("flash.users.form.confirm")}", class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

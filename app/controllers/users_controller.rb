@@ -28,8 +28,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def make_admin
+    @user = User.find(params[:id])
+
+    @user.make_admin!
+    @user.save!
+
+    render nothing: true
+  end
+
   private
   def user_params
-    params.require(:user).permit(:username, :fullname, :encrypted_password, :email)
+    params.require(:user).permit(:username, :fullname, :encrypted_password, :email, :role)
   end
 end

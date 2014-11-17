@@ -3,7 +3,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
-  respond_to :html, :json, :xml
+  respond_to :html, :json
+
+  layout "application"
 
   def default_url_options( options = {} )
     { locale: I18n.locale }
@@ -14,10 +16,10 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || set_locale_by_subdomain
   end
 
-  def set_locale_by_scope
-    locale = params.fetch(:locale, I18n.default_locale).to_sym
-    I18n.locale = locale if I18n.available_locales.include?(locale)
-  end
+  # def set_locale_by_scope
+  #   locale = params.fetch(:locale, I18n.default_locale).to_sym
+  #   I18n.locale = locale if I18n.available_locales.include?(locale)
+  # end
 
   def set_locale_by_subdomain
     locale = request.host.split(".").first.to_sym

@@ -1,26 +1,26 @@
-<%= form_for @user, class: "form-inline" do |f| %>
+<%= form_for @user, class: "form-horizontal" do |f| %>
   <%= render "shared/error_messages", :record => @user %>
 
   <section class="form-group">
-    <%= f.label :username, class: 'form-label' %>
+    <%= f.label t("flash.users.form.username"), class: 'form-label' %>
     <%= f.text_field :username, class: 'form-control', placeholder: t("flash.users.form.username")%>
     <%= error_for @user, :username %>
   </section>
 
   <section class="form-group">
-    <%= f.label :fullname, class: 'form-label' %>
+    <%= f.label t("flash.users.form.fullname"), class: 'form-label' %>
     <%= f.text_field :fullname, class: 'form-control', placeholder: t("flash.users.form.fullname")%>
     <%= error_for @user, :fullname %>
   </section>
 
   <section class="form-group">
-    <%= f.label :email, class: 'form-label' %>
+    <%= f.label t("flash.users.form.email"), class: 'form-label' %>
     <%= f.email_field :email, class: 'form-control', placeholder: t("flash.users.form.email") %>
     <%= error_for @user, :email %>
   </section>
 
   <section class="form-group">
-    <%= f.label :encrypted_password, class: 'form-label' %>
+    <%= f.label t("flash.users.form.encrypted_password"), class: 'form-label' %>
     <%= f.password_field :encrypted_password, class: "form-control", placeholder: t("flash.users.form.password") %>
     <%= error_for @user, :encrypted_password %>
   </section>

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     resources :users
   end
 
+    post 'admin/:id', to: 'users#make_admin', as: 'admin'
   root to: "users#index"
 end

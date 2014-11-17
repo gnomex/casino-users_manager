@@ -7,6 +7,7 @@ pt-BR:
       create:
         notice: "O usuário foi cadastrado com sucesso!"
         error: "Opa! Algo deu errado, verifique os campos abaixo."
+        admin: "Administrador"
 
       destroy:
         notice: "O usuário foi removido com sucesso"
@@ -18,6 +19,8 @@ pt-BR:
         fullname: "Nome Completo"
         email: "Email"
         password: "Senha"
+        role: "Permissão"
+        encrypted_password: "Senha"
         created: "Criado em"
         action: "Ação"
         new: "Novo usuário"
@@ -25,6 +28,8 @@ pt-BR:
         delete: "Excluir"
         confirm: "Você tem certeza?"
         erros_mesages: "Erros"
+        admin: "Administrador"
+        make_admin: "Admin!"
 
     sessions:
       create:
